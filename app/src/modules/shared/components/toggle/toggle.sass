@@ -1,0 +1,67 @@
+@import "../../../../variables"
+.toggle-container
+  display: flex
+  align-items: center
+  .toggle-label
+    margin-right: 5px
+    font-size: 14px
+.toggle
+  position: relative
+  min-width: 40px
+  display: inline-block
+  vertical-align: middle
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  overflow: hidden
+  border-radius: 20px
+  &__checkbox
+    display: none
+  &__inner-label
+    display: block
+    overflow: hidden
+    cursor: pointer
+    border: 0 solid #bbb
+    margin: 0
+    height: 22px
+  &__switch-inner
+    display: flex
+    width: 200%
+    height: 100%
+    margin-left: -100%
+    transition: margin 0.3s ease-in 0s
+    // position: absolute
+    flex-direction: row
+    justify-content: center
+    overflow: hidden
+  &__switch-bg
+    flex: 1
+    font-size: 12px
+    align-items: center
+    display: flex
+    &--active
+      background: #2b192e
+      text-align: left
+    &--inactive
+      background: $gray
+      text-align: right
+
+  &__switch-switch
+    display: block
+    width: 18px
+    height: 18px
+    margin: 2px
+    background: #fff
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    border: 0 solid transparent
+    border-radius: 20px
+    transition: all 0.3s ease-in 0s
+
+  &__checkbox:checked + &__inner-label
+    .toggle__switch-inner
+      margin-left: 0
+    .toggle__switch-switch
+      left: calc(100% - 22px)

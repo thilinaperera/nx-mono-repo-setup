@@ -1,0 +1,35 @@
+$gray_border: rgba(217, 217, 217, 0.54);
+$light_border: #e8e8e8;
+
+$gray: #979695;
+$dark_purple: #2b192e;
+$indigo: #50006c;
+$alabaster-lite: #faf7f4;
+$alabaster: #f5eee8;
+$rosewater: #ce8ca5;
+
+@mixin for-phone-only {
+  @media (max-width: 599px) {
+    @content;
+  }
+}
+@mixin for-tablet-portrait-up {
+  @media (min-width: 600px) {
+    @content;
+  }
+}
+@mixin for-tablet-landscape-up {
+  @media (min-width: 900px) {
+    @content;
+  }
+}
+@mixin for-desktop-up {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+@mixin for-big-desktop-up {
+  @media (min-width: 1800px) {
+    @content;
+  }
+}

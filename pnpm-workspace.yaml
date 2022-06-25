@@ -1,0 +1,6 @@
+packages:
+  - "platform"
+  - "app"
+  # exclude
+  - "!**/test/**"
+  - "!.idea"
